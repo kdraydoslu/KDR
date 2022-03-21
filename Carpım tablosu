@@ -4,21 +4,21 @@
 from random import randint
 
 """
-    Küçük çapta bir çarpım tablosu uygulaması
+    Eğlenceli bir çarpım tablosu uygulaması
 """
 
-print("-" * 50)
-print("\t\tHOŞGELDİNİZ..")
-print("-" * 50, "\n")
+print("-" * 100)
+print("\t\t                              HOŞGELDİNİZ..")
+print("-" * 100, "\n")
 
 
 def carpim(i, j, r):
     if r != "-1":
         result = str(i * j)
         if result == r:
-            print("\t\t***** Doğru *****")
+            print("\t\t***** Bildin *****")
         else:
-            print("\t!!! Yanlış cevap %s olacaktı" % result)
+            print("\t!!! Bilemedin %s olacaktı" % result)
     else:
 
         secim()
@@ -34,7 +34,7 @@ def basla(rng_1, rng_2):
             sayi_1 = randint(rng_1, rng_2)
             sayi_2 = randint(rng_1, rng_2)
             print("_" * 50, "\n")
-            print("\t%d x %d kaça eşittir? (çıkış = -1)" % (sayi_1, sayi_2))
+            print("\t%d x %d kaça eşittir? (Kappa = -1)" % (sayi_1, sayi_2))
             sonuc = input("sonuc >> ")
             carpim(sayi_1, sayi_2, sonuc)
 
@@ -45,24 +45,24 @@ def basla(rng_1, rng_2):
 
 def secim():
     print(" Hangi seviyeden başlamak istiyorsunuz (çıkış = -1) ?\n")
-    print("  1 - Kolay ")
-    print("  2 - Orta ")
-    print("  3 - Zor")
-    print("  4 - Çok zor\n")
+    print("  1 - 1.sınıfdan mı başlıyoruz ? ")
+    print("  2 - Hadi ama yaparsın ")
+    print("  3 - Yani eh işte ")
+    print("  4 - Dene ve gör\n")
 
     svy = input(" >> ")
 
     if svy == "1":
-        basla(1, 6)
+        basla(1, 16)
 
     elif svy == "2":
-        basla(6, 12)
+        basla(16, 122)
 
     elif svy == "3":
-        basla(12, 25)
+        basla(122, 215)
 
     elif svy == "4":
-        basla(25, 100)
+        basla(215, 2100)
 
     else:
         exit(0)
@@ -70,4 +70,6 @@ def secim():
 
 if __name__ == '__main__':
     secim()
+
+
 
